@@ -1,0 +1,28 @@
+@startuml
+scale 2 
+left to right direction
+skinparam packageStyle rect 
+actor UserInn
+actor UserOut
+
+rectangle Chuck_Norris_Finacial{
+
+    UserInn --> (Hows the money rate? )
+    (Hows the money rate? )<.. (Api Treasury Data)
+    (Hows the money rate? ).>(country)
+    (country).>(Api Treasury Data)
+
+    (country)<.(Rate)
+    (Rate)..>(Going Up)
+    (Rate)<..(Joke)
+    (STL Squre Print on) ..> (Joke)
+    (Going Up)..>(STL Squre Print on)
+    UserOut <--- (STL Squre Print on)
+
+    (Rate)..> (Going Down)
+    (Going Down)..> (Sucks to be U)
+    (STL Curcile Print on) ..> (Sucks to be U)
+    UserOut <- (STL Curcile Print on)
+    (Chuck Api) <. (Joke)
+}
+@enduml
